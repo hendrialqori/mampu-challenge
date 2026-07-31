@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+echo "Running unit tests ... [May takes a long time]"
+npm run test:unit
+
+echo "Running e2e tests ... [May takes a long time]"
+npm run test:e2e
