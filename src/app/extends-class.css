@@ -1,0 +1,38 @@
+.loading {
+   position: relative;
+   overflow: hidden;
+   background: rgb(228 228 231);
+ }
+ 
+ .dark .loading {
+   background: rgb(63 63 70);
+ }
+ 
+ .loading::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   transform: translateX(-100%);
+   background: linear-gradient(
+     90deg,
+     transparent,
+     rgb(255 255 255 / 0.55),
+     transparent
+   );
+   animation: loading 1.2s infinite;
+ }
+ 
+ .dark .loading::after {
+   background: linear-gradient(
+     90deg,
+     transparent,
+     rgb(255 255 255 / 0.08),
+     transparent
+   );
+ }
+ 
+ @keyframes loading {
+   100% {
+     transform: translateX(100%);
+   }
+ }
