@@ -1,0 +1,21 @@
+'use client'
+
+import { Button } from "@/components/ui/button"
+import { ArrowLeftIcon } from "lucide-react"
+import { useRouter } from "next/navigation"
+
+export function BackButton() {
+   const router = useRouter()
+
+   return (
+      <Button
+         size="sm"
+         variant="outline"
+         className="bg-zinc-50"
+         onClick={() => router.back()}
+      >
+         <ArrowLeftIcon />
+         Back
+      </Button>
+   )
+}
